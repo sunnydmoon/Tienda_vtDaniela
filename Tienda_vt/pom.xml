@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.0</version>
+		<version>3.4.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tienda</groupId>
-	<artifactId>tienda_vtDaniela</artifactId>
-	<version>1</version>
-	<name>tienda_vtDaniela</name>
-	<description>Proyecto tienda de viernes tarde</description>
+	<artifactId>tienda</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>tienda</name>
+	<description>Proyecto tienda viernes tarde</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -26,8 +26,11 @@
 		<tag/>
 		<url/>
 	</scm>
+        
 	<properties>
 		<java.version>24</java.version>
+                <maven.compiler.release>17</maven.compiler.release>
+                
 	</properties>
 	<dependencies>
 		<dependency>
@@ -60,29 +63,27 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</path>
-					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-maven-plugin</artifactId>
+<configuration>
+<excludes>
+<exclude>
+<groupId>org.projectlombok</groupId>
+<artifactId>lombok</artifactId>
+</exclude>
+</excludes>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.13.0</version>
+<configuration>                  
+<compilerArgs>
+<arg>-Xlint</arg>
+</compilerArgs>
+</configuration>
+</plugin>
 		</plugins>
 	</build>
 

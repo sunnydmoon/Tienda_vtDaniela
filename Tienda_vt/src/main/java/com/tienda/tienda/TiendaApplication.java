@@ -1,13 +1,13 @@
-package com.tienda;
+package com.tienda.tienda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TiendaVtDanielaApplication {
+public class TiendaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TiendaVtDanielaApplication.class, args);
+		SpringApplication.run(TiendaApplication.class, args);
 	}
 
 }
