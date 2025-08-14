@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!-- Dirección ip computadora: 192.168.0.10-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}"/>
+    
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+       
+        <section th:replace="~{categoria/fragmentos :: listado}"/>
+
+       
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>
