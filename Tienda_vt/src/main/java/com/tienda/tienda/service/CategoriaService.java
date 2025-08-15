@@ -24,4 +24,23 @@ public class CategoriaService {
     return lista;
         
     }
+    
+    @Transactional(readOnly=true)
+    public Categoria getCategoria(Categoria categoria) {
+    return categoriaRepository.findById(id: categoria.getIdCategoria())
+    .orElse(other:null);
+    }
+    
+    @Transactional
+    public void save(Categoria categoria) {
+        categoriaRepository.save(entity: catgeoria);
+        
+    }
+    @Transactional
+    public void delate(Categoria categoria) {
+        categoriaRepository.delete(entity: catgeoria);
+        
+    }
+    
+    
 }
