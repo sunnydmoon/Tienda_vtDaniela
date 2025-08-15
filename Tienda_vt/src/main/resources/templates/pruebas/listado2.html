@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://thymeleaf.org"
-      xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity6">
+    xmlns:th="http://thymeleaf.org"
+    xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity6">
     <head th:replace="~{/layout/plantilla :: head}">
         <title>Pruebas</title>
         <meta charset="UTF-8"/> <!-- Alfabeto -->
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-
-        <section th:replace = "~{producto/fragmentos :: btnAgregar}"/>
-
-        <section th:replace = "~{producto/fragmentos :: agregarProducto}"/>
-
-        <section th:replace = "~{producto/fragmentos :: listado}"/>
-
+        
+        <section th:replace = "~{pruebas/fragmentos :: filtros}"/>
+        
+        <section th:replace = "~{pruebas/fragmentos :: tarjetas}"/>
+        
         <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>

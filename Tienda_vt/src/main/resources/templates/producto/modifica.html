@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<!-- Dirección ip computadora: 192.168.0.10-->
+
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
-    <head th:replace="~{layout/plantilla :: head}"/>
-    
+    xmlns:th="http://thymeleaf.org"
+    xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{/layout/plantilla :: head}">
+        <title>Pruebas</title>
+        <meta charset="UTF-8"/> <!-- Alfabeto -->
+    </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-       
-        <section th:replace="~{categoria/fragmentos :: agregarCategoria}"/>
-        <section th:replace="~{categoria/fragmentos :: listado}"/>
-
-
+        
+        
+        <section th:replace = "~{producto/fragmentos :: editarProducto}"/>
+        
+        
         <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>
