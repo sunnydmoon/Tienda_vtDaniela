@@ -38,8 +38,14 @@ public class CategoriaService {
     }
     @Transactional
     public void delate(Categoria categoria) {
+        try {
         categoriaRepository.delete(entity: catgeoria);
+        categoriaRepository.flush();
         
+        return true;
+                } catch (Exception e) {
+                return false;
+                }
     }
     
     
